@@ -1,0 +1,99 @@
+import React from 'react';
+import profilePic from '../assets/Foto de Perfil.jpg';
+import cvPdf from '../assets/Desarrollador de Software Yorjan Daniel Ibarra.pdf';
+
+import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaFileDownload, FaLinkedin, FaGithub } from 'react-icons/fa';
+
+
+
+export const Header: React.FC = () => {
+    return (
+        <header className="container animate-fade-in" style={{
+            paddingTop: '6rem',
+            paddingBottom: '4rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center'
+        }}>
+
+            {/* Glowing Profile Picture */}
+            <div className="neon-border" style={{ marginBottom: '2rem' }}>
+                <div style={{
+                    width: '220px',
+                    height: '220px',
+                    borderRadius: '50%',
+                    background: 'var(--bg-card)',
+                    padding: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    zIndex: 2,
+                    overflow: 'hidden'
+                }}>
+                    <img
+                        src={profilePic}
+                        alt="Yorjan Daniel Ibarra"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            borderRadius: '50%'
+                        }}
+                    />
+                </div>
+            </div>
+
+            {/* Name and Title */}
+            <h1 className="hero-title animate-slide-up delay-100">
+                YORJAN DANIEL IBARRA
+            </h1>
+            <h2 className="hero-subtitle animate-slide-up delay-200">
+                Analista y Desarrollador de Software
+            </h2>
+
+            {/* Action Buttons */}
+            <div className="animate-slide-up delay-300" style={{ marginBottom: '2.5rem' }}>
+                <a
+                    href={cvPdf}
+                    download="CV_Yorjan_Ibarra.pdf"
+                    className="hero-btn"
+                >
+                    <FaFileDownload /> Descargar Curriculum
+                </a>
+            </div>
+
+            {/* Glass Social Bar */}
+            <div
+                className="glass-panel animate-slide-up delay-400"
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                    gap: '1rem',
+                    padding: '1.5rem',
+                    borderRadius: '2rem',
+                    maxWidth: '100%'
+                }}
+            >
+                <a href="tel:+573025555789" className="social-pill" title="Llamar">
+                    <FaPhoneAlt /> (+57) 302 5555789
+                </a>
+                <span className="social-pill" title="Ubicación">
+                    <FaMapMarkerAlt /> Cúcuta
+                </span>
+                <a href="mailto:yorjanibarra82@gmail.com" className="social-pill" title="Email">
+                    <FaEnvelope /> yorjanibarra82@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/yorjan-daniel-ibarra-villamizar-37326833b" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="LinkedIn">
+                    <FaLinkedin />
+                </a>
+                <a href="https://github.com/YorjanDaniel" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="GitHub">
+                    <FaGithub />
+                </a>
+            </div>
+
+        </header>
+    );
+};
