@@ -1,0 +1,92 @@
+{
+    "header": {
+        "title": "Software Analyst and Developer",
+        "download_cv": "Full Stack Developer",
+        "location": "Cúcuta",
+        "call": "Call",
+        "email": "Email"
+    },
+    "summary": {
+        "title": "Summary",
+        "content": "Software developer with emphasis on backend and strong logic in solving algorithmic problems. Passionate about learning new technologies and applying them in innovative projects. I consider myself a person with great ability to adapt, responsible, self-taught and committed to teamwork."
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "jobs": [
+            {
+                "role": "ICT Assistant",
+                "company": "Cueros Velez S.A.S",
+                "period": "11/01/2025 - 01/12/2025",
+                "description": "Supported continuous software improvement by applying best development practices, code optimization, and bug fixing.",
+                "details": [
+                    "Implemented an intelligent chatbot integrated with n8n to automate processes and improve customer service.",
+                    "Provided hardware support, preventive/corrective maintenance, and technical documentation.",
+                    "Supported inventory management, performing system adjustments, equipment control, and internal logistics improvements."
+                ]
+            },
+            {
+                "role": "Frontend Developer – AImed Project",
+                "company": "ST&T – Software Solutions and Telecommunications (Remote)",
+                "period": "04/10/2025 - 11/09/2025",
+                "description": "Developed software solutions focused on secure, stable, and scalable platforms, implementing modern interfaces with Vue.js and React Native with Node.js backend functions.",
+                "details": [
+                    "Managed REST APIs, NoSQL databases, and collaborated on requirements analysis.",
+                    "Performe maintenance and support for the web platform, ensuring availability.",
+                    "Deployed in Linux environments, configured SSH/SFTP services, and performed basic server administration."
+                ]
+            },
+            {
+                "role": "Full Stack Developer – coNECTO",
+                "company": "ST&T – Software Solutions and Telecommunications (Remote)",
+                "period": "04/10/2025 - 11/09/2025",
+                "description": "Developed data implementation and consumption from a REST API, building dynamic and responsive interfaces using React.",
+                "details": [
+                    "Participated in system architecture design and microservices integration.",
+                    "Optimized data flow between digital ecosystem services.",
+                    "Implemented version control with Git/Bitbucket and controlled deployments.",
+                    "Optimized infrastructure, monitored services, and supported production applications."
+                ]
+            },
+            {
+                "role": "Full Stack Developer – CEDRUMQR",
+                "company": "Servicio Nacional de Aprendizaje SENA",
+                "period": "07/02/2025 - 04/09/2025",
+                "description": "Implementation and data consumption from REST APIs using Angular and TypeScript, building responsive and modular interfaces.",
+                "details": [
+                    "Worked with Laravel/PHP and MySQL to create optimized endpoints, models, and queries.",
+                    "Integrated microservices and improved system data flow.",
+                    "Used AWS services (Amplify, S3, Lambda) for deployments, monitoring, and technical support."
+                ]
+            }
+        ]
+    },
+    "education": {
+        "title": "Education",
+        "university": "Francisco de Paula Santander University",
+        "degree": "Systems Engineering",
+        "semester": "Eighth semester",
+        "status": "In progress"
+    },
+    "skills": {
+        "title": "Skills",
+        "languages": "Languages",
+        "frameworks": "Frameworks",
+        "cloud_data": "Cloud & Data",
+        "tools": "Tools & Others"
+    },
+    "certifications": {
+        "title": "Certifications & Achievements",
+        "hackathon": "Hackathon Second Place",
+        "hackathon_desc": "Recognition for developing an innovative solution in record time."
+    },
+    "contact": {
+        "title": "Let's Work Together",
+        "name_placeholder": "Your Name",
+        "email_placeholder": "your@email.com",
+        "message_placeholder": "Write your message here...",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "success": "Thank you!",
+        "success_msg": "I'll write to you very soon."
+    }
+}

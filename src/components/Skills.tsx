@@ -10,6 +10,7 @@ import {
     SiPostman, SiSwagger, SiVercel, SiAwsamplify, SiP5Dotjs
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
+import { useTranslation } from 'react-i18next';
 
 interface Skill {
     name: string;
@@ -64,6 +65,7 @@ const SkillItem = ({ skill }: { skill: Skill }) => (
 );
 
 export const Skills: React.FC = () => {
+    const { t } = useTranslation();
     // Map of skills with documentation URLs and brand colors
     const languages: Skill[] = [
         { name: "Java", icon: <FaJava />, url: "https://dev.java/", color: "#f89820" },
@@ -114,11 +116,11 @@ export const Skills: React.FC = () => {
 
     return (
         <section className="container animate-slide-up delay-400">
-            <h3 className="section-title">Tecnologías y Habilidades</h3>
+            <h3 className="section-title">{t('skills.title')}</h3>
 
             <div style={{ marginBottom: '3rem' }}>
                 <h4 style={{ color: 'var(--accent-blue)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-                    Lenguajes
+                    {t('skills.languages')}
                 </h4>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
                     {languages.map(skill => <SkillItem key={skill.name} skill={skill} />)}
@@ -127,7 +129,7 @@ export const Skills: React.FC = () => {
 
             <div style={{ marginBottom: '3rem' }}>
                 <h4 style={{ color: 'var(--accent-purple)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-                    Frameworks & Librerías
+                    {t('skills.frameworks')}
                 </h4>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
                     {frameworks.map(skill => <SkillItem key={skill.name} skill={skill} />)}
@@ -136,7 +138,7 @@ export const Skills: React.FC = () => {
 
             <div style={{ marginBottom: '3rem' }}>
                 <h4 style={{ color: 'var(--accent-red)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-                    Bases de Datos & Cloud
+                    {t('skills.cloud_data')}
                 </h4>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
                     {dataCloud.map(skill => <SkillItem key={skill.name} skill={skill} />)}
@@ -145,7 +147,7 @@ export const Skills: React.FC = () => {
 
             <div>
                 <h4 style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-                    Herramientas & Otros
+                    {t('skills.tools')}
                 </h4>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
                     {tools.map(skill => <SkillItem key={skill.name} skill={skill} />)}

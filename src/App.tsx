@@ -1,4 +1,5 @@
 import { BackgroundAnimation } from './components/BackgroundAnimation';
+import { LanguageSelector } from './components/LanguageSelector';
 import { Header } from './components/Header';
 import { Summary } from './components/Summary';
 import { Experience } from './components/Experience';
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <BackgroundAnimation />
+      <LanguageSelector />
 
       {/* Fallback gradient if p5 loads slow or transparently overlays */}
       <div style={{

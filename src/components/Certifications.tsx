@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { FaTrophy } from 'react-icons/fa';
 
 export const Certifications: React.FC = () => {
+    const { t } = useTranslation();
+
     const certs = [
         { name: "SCRUM aplicado a proyectos de desarrollo de software", date: "2025" },
         { name: "Inteligencia Artificial para integración y análisis de datos", date: "2025" },
@@ -12,7 +15,7 @@ export const Certifications: React.FC = () => {
 
     return (
         <section className="container animate-slide-up delay-400">
-            <h3 className="section-title">Cursos y Logros</h3>
+            <h3 className="section-title">{t('certifications.title')}</h3>
             <div className="card">
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
@@ -20,8 +23,8 @@ export const Certifications: React.FC = () => {
                             <FaTrophy />
                         </span>
                         <div>
-                            <strong>Segundo lugar en Hackatón</strong>
-                            <p style={{ margin: 0, color: 'var(--text-secondary)' }}>Destacando habilidades de solución de problemas y trabajo en equipo.</p>
+                            <strong>{t('certifications.hackathon')}</strong>
+                            <p style={{ margin: 0, color: 'var(--text-secondary)' }}>{t('certifications.hackathon_desc')}</p>
                         </div>
                     </li>
                 </ul>

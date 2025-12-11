@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const EducationItem = ({ title, institution, period, details }: { title: string, institution: string, period: string, details?: string }) => (
     <div className="card" style={{ borderLeft: '4px solid var(--accent-blue)' }}>
@@ -12,9 +13,10 @@ const EducationItem = ({ title, institution, period, details }: { title: string,
 );
 
 export const Education: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <section className="container animate-slide-up delay-300">
-            <h3 className="section-title">Educación</h3>
+            <h3 className="section-title">{t('education.title')}</h3>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
                 <EducationItem

@@ -1,12 +1,18 @@
 import React from 'react';
 import profilePic from '../assets/Foto de Perfil.jpg';
-import cvPdf from '../assets/Desarrollador de Software Yorjan Daniel Ibarra.pdf';
+import cvPdfEs from '../assets/Desarrollador de Software Yorjan Daniel Ibarra.pdf';
+import cvPdfEn from '../assets/Full Stack Developer Daniel.pdf';
 
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaFileDownload, FaLinkedin, FaGithub } from 'react-icons/fa';
-
+import { useTranslation } from 'react-i18next';
 
 
 export const Header: React.FC = () => {
+    const { t, i18n } = useTranslation();
+
+    const cvFile = i18n.language === 'en' ? cvPdfEn : cvPdfEs;
+    const downloadName = i18n.language === 'en' ? "CV_Yorjan_Ibarra_FullStack.pdf" : "CV_Yorjan_Ibarra_SoftwareDev.pdf";
+
     return (
         <header className="container animate-fade-in" style={{
             paddingTop: '6rem',
@@ -50,17 +56,17 @@ export const Header: React.FC = () => {
                 YORJAN DANIEL IBARRA
             </h1>
             <h2 className="hero-subtitle animate-slide-up delay-200">
-                Analista y Desarrollador de Software
+                {t('header.title')}
             </h2>
 
             {/* Action Buttons */}
             <div className="animate-slide-up delay-300" style={{ marginBottom: '2.5rem' }}>
                 <a
-                    href={cvPdf}
-                    download="CV_Yorjan_Ibarra.pdf"
+                    href={cvFile}
+                    download={downloadName}
                     className="hero-btn"
                 >
-                    <FaFileDownload /> Descargar Curriculum
+                    <FaFileDownload /> {t('header.download_cv')}
                 </a>
             </div>
 
@@ -77,13 +83,13 @@ export const Header: React.FC = () => {
                     maxWidth: '100%'
                 }}
             >
-                <a href="tel:+573025555789" className="social-pill" title="Llamar">
+                <a href="tel:+573025555789" className="social-pill" title={t('header.call')}>
                     <FaPhoneAlt /> (+57) 302 5555789
                 </a>
                 <span className="social-pill" title="Ubicación">
-                    <FaMapMarkerAlt /> Cúcuta
+                    <FaMapMarkerAlt /> {t('header.location')}
                 </span>
-                <a href="mailto:yorjanibarra82@gmail.com" className="social-pill" title="Email">
+                <a href="mailto:yorjanibarra82@gmail.com" className="social-pill" title={t('header.email')}>
                     <FaEnvelope /> yorjanibarra82@gmail.com
                 </a>
                 <a href="https://www.linkedin.com/in/yorjan-daniel-ibarra-villamizar-37326833b" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="LinkedIn">

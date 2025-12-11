@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 export const Contact: React.FC = () => {
+    const { t } = useTranslation();
     const [state, setState] = useState<{ submitting: boolean; succeeded: boolean }>({
         submitting: false,
         succeeded: false,
@@ -39,20 +41,20 @@ export const Contact: React.FC = () => {
 
     return (
         <section className="container animate-slide-up delay-400" id="contact" style={{ marginBottom: '4rem' }}>
-            <h3 className="section-title">Contáctame</h3>
+            <h3 className="section-title">{t('contact.title')}</h3>
             <div className="card" style={{ maxWidth: '600px', margin: '0 auto' }}>
                 <h4 style={{ textAlign: 'center', marginBottom: '1.5rem', color: 'var(--text-primary)', fontSize: '1.5rem' }}>
-                    Trabajemos juntos
+                    {t('contact.title')}
                 </h4>
 
                 {state.succeeded ? (
                     <div style={{ textAlign: 'center', padding: '2rem 0' }}>
                         <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎉</div>
                         <p style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
-                            ¡Muchas gracias!
+                            {t('contact.success')}
                         </p>
                         <p style={{ color: 'var(--text-secondary)' }}>
-                            Te escribiré muy pronto.
+                            {t('contact.success_msg')}
                         </p>
                     </div>
                 ) : (
@@ -61,7 +63,7 @@ export const Contact: React.FC = () => {
                         style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
                     >
                         <div>
-                            <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>Nombre</label>
+                            <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>{t('contact.name_placeholder')}</label>
                             <input
                                 type="text"
                                 name="name"
@@ -84,7 +86,7 @@ export const Contact: React.FC = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="email" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>Correo Electrónico</label>
+                            <label htmlFor="email" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>{t('contact.email_placeholder')}</label>
                             <input
                                 type="email"
                                 name="email"
@@ -107,7 +109,7 @@ export const Contact: React.FC = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="message" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>Mensaje</label>
+                            <label htmlFor="message" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>{t('contact.message_placeholder')}</label>
                             <textarea
                                 name="message"
                                 id="message"
@@ -146,7 +148,7 @@ export const Contact: React.FC = () => {
                                 cursor: state.submitting ? 'not-allowed' : 'pointer'
                             }}
                         >
-                            <FaPaperPlane /> {state.submitting ? 'Enviando...' : 'Enviar Mensaje'}
+                            <FaPaperPlane /> {state.submitting ? t('contact.sending') : t('contact.send')}
                         </button>
                     </form>
                 )}
